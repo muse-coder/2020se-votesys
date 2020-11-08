@@ -8,8 +8,7 @@ let vm = new Vue(
             "base-vote-form": baseVoteForm
         },
         data: {
-            groups: [],
-            test: {}
+            groups: []
         },
         computed: {
             maxPoll: function () {
