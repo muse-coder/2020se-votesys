@@ -30,7 +30,7 @@ let vm = new Vue(
                 if (postData.vote.length > 0) {
                     $.post(
                         "",
-                        postData,
+                        JSON.stringify(postData),
                     );
                 }
             },
