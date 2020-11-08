@@ -6,7 +6,8 @@ let baseGroupInfo = {
         "poll": Number,
         "maxPoll": Number,
         "checked": Boolean,
-        "hasDetail": Boolean
+        "hasDetail": Boolean,
+        "hasCheckbox": Boolean
     },
     model: {
         prop: "checked",
@@ -18,8 +19,10 @@ let baseGroupInfo = {
         };
     },
     template: `
-        <div>
+        <div class="word">
             <input
+                class="checkbox"
+                v-if="hasCheckbox"
                 type="checkbox"
                 :checked="checked"
                 @change="$emit('checkbox-change', $event.target.checked)"
@@ -28,6 +31,7 @@ let baseGroupInfo = {
             <meter min="0" :max="maxPoll" :value="poll"></meter>
             {{ poll }} 票
             <button
+                class="button"
                 type="button"
                 v-if="hasDetail"
                 @click="showDetail = !showDetail"

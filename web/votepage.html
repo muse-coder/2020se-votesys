@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <head>
     <title>投票页面</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="vm">
+    <div class="background"></div>
+    <div id="vm" class="center white">
         <base-group-info
             v-for="g in groups" :key="g.id"
             :gid="g.id"
             :poll="g.poll"
             :max-poll="maxPoll"
             v-model="g.checked"
+            has-checkbox
         ></base-group-info>
         <base-vote-form v-on:submit="vote($event.sno, $event.password)"></base-vote-form>
     </div>

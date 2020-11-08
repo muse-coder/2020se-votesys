@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>教师端页面</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-teacher"></div>
+    <div id="vm" class="center white">
+        <base-group-info
+            v-for="g in groups" :key="g.id"
+            :gid="g.id"
+            :poll="g.poll"
+            :max-poll="maxPoll"
+            has-detail
+        >
+            <div class="word-small">
+                <p>
+                    小组成员：
+                </p>
+                <p v-for="s in g.member">
+                    学号：{{ s.sno }}
+                </p>
+                <p>
+                    得票来源：
+                </p>
+                <p v-for="s in g.voters">
+                    学号：{{ s.sno }} 组号：{{ s.gid }}
+                </p>
+            </div>
+        </base-group-info>
+    </div>
+    <script src="js/framework/vue.js"></script>
+    <script src="js/framework/jquery.js"></script>
+    <script src="js/baseGroupInfo.js"></script>
+    <script src="js/teacherpage.js"></script>
+</body>
