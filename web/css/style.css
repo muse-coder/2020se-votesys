@@ -1,0 +1,89 @@
+.center {
+    text-align: center;
+}
+
+.white {
+    color: beige;
+}
+
+.word {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.word-small {
+    font-size: 15px;
+}
+
+.background {
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.background-teacher {
+    background-image: url("../img/bg_teacher.jpg");
+    background-size: cover;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.button {
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 30px;
+    height: fit-content;
+    width: 15%;
+	line-height: 18px!important;
+	padding: 3px 18px;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: normal;
+	border-radius: 3px;
+	margin: 0 8px 0 3px;
+	border: 1px solid #faf4f4;
+	color: #faf0f0;
+	background-color: rgba(0,0,0,0);
+	cursor: pointer;
+}
+
+.button:hover {
+    background-color: #7493d6;
+    color: #000000;
+    border: 1px solid #7493d6;
+}
+
+.checkbox {
+    height: 24px;
+    width: 24px; 
+}
+
+.table-center {
+    margin: 0px auto;
+}
+
+.table-underline {
+    border-bottom: 1px solid white;
+}
+
+.table-leftpadding {
+    padding-left: 30px;
+}
+
+.left {
+    text-align: left;
+}
+
+.inline-top {
+    display: inline-block;
+    vertical-align: top;
+}
