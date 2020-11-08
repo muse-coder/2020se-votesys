@@ -14,18 +14,34 @@
             has-detail
         >
             <div class="word-small">
-                <p>
-                    小组成员：
-                </p>
-                <p v-for="s in g.member">
-                    学号：{{ s.sno }}
-                </p>
-                <p>
-                    得票来源：
-                </p>
-                <p v-for="s in g.voters">
-                    学号：{{ s.sno }} 组号：{{ s.gid }}
-                </p>
+                <div class="inline-top">
+                    <table class="table-center">
+                        <tr>
+                            <td class="left table-underline">小组成员</td>
+                        </tr>
+                        <tr>
+                            <th class="left">学号</th>
+                        </tr>
+                        <tr v-for="s in g.member" class="left">
+                            <td>{{ s.sno }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="inline-top table-leftpadding">
+                    <table class="table-center">
+                        <tr>
+                            <td class="left table-underline">得票来源</td>
+                        </tr>
+                        <tr>
+                            <th class="left">学号</th>
+                            <th class="left table-leftpadding">组号</th>
+                        </tr>
+                        <tr v-for="s in g.voters" class="left">
+                            <td>{{ s.sno }}</td>
+                            <td class="table-leftpadding">{{ s.gid }}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </base-group-info>
     </div>

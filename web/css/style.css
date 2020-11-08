@@ -66,3 +66,24 @@
     height: 24px;
     width: 24px; 
 }
+
+.table-center {
+    margin: 0px auto;
+}
+
+.table-underline {
+    border-bottom: 1px solid white;
+}
+
+.table-leftpadding {
+    padding-left: 30px;
+}
+
+.left {
+    text-align: left;
+}
+
+.inline-top {
+    display: inline-block;
+    vertical-align: top;
+}
